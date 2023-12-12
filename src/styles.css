@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+    --focusbuttonColor: #1f83f2;
+    --focusbuttonHover: #5ba6fc;
+    --buttonText: #ffffff;
+    --buttonTextunfocus: #383838;
+    --unfocusbuttonColor: rgb(255, 255, 255)00;
+    --mainColor: #222b38;
+    --warnText: red;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

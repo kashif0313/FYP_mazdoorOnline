@@ -1,0 +1,282 @@
+.container {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.topContainer {
+    position: relative;
+    width: 100%;
+    max-height: 50%;
+    overflow: hidden;
+}
+
+.imageslider {
+    position: relative;
+    width: 100%;
+    
+    max-height:20%;
+}
+
+.imageSrc {
+   width:100%;
+}
+
+.imagecontainer {
+    height: 100%;
+    width: auto;
+    display: flex;
+    position: relative;
+    animation-name: example;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes example {
+    0% {
+        left: 0px;
+    }
+    15% {
+        left: 0;
+    }
+    20% {
+        left: -101%;
+    }
+    40% {
+        left: -101%;
+    }
+    45% {
+        left: -201%;
+    }
+    70% {
+        left: -201%;
+    }
+    75% {
+        left: -101%;
+    }
+    90% {
+        left: -101%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.hiringContainer {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.hiringImg {
+    height: 100%;
+    width: 100%;
+}
+
+.complainContainer {
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+.complainContainerContent {
+    display: flex;
+}
+
+.complainImg {
+    position: relative;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+.imgcontainer {
+    height: 20%;
+    width: 25%;
+    object-fit: contain;
+    margin-left: 10%;
+}
+
+.complainTextContainer {
+    position: relative;
+    flex: 1;
+    padding-top: 6%;
+}
+
+.ComplainTitle {
+    position: relative;
+    font-size: 1.5vw;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.complainText {
+    font-size: 1.2vw;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.SearchIcon {
+    height: 5%;
+    width: 5%;
+    position: relative;
+    float: right;
+    margin-right: 5%;
+    margin-top: 1%;
+}
+
+.searchBar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid white;
+    border-radius: 30px;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.336);
+    padding-left: 1%;
+}
+
+.searchInput {
+    position: relative;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.5vw;
+    border: none;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    color: white;
+}
+
+.searchInput::placeholder {
+    color: white;
+}
+
+.serviceContainer {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.container1 {
+    position: relative;
+    width: 100%;
+}
+
+.containerTitle {
+    position: relative;
+    font-size: 1.2vw;
+    color: black;
+    padding-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.serviceContainer1 {
+    height: auto;
+    max-height: 20%;
+    object-fit: contain;
+    width: 20%;
+    position: relative;
+    display: inline-block;
+    left: 0%;
+    border: 2px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.serviceContainer1:hover .serviceSrc {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+.serviceSrc {
+    position: relative;
+    top: 0;
+    width: 100%;
+    object-fit: contain;
+    transition: 0.2s ease-in-out;
+}
+
+.titlecontainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.title {
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+.titleBg {
+    font-size: 2vw;
+    color: white;
+    top: 0;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .topContainer {
+        width:100%;
+        height:auto;
+        
+        max-height: 30%;
+       
+    }
+    .imageslider {
+        width:100%;
+        height:100%;
+        object-fit: contain;
+       
+        
+    }
+    .containerTitle {
+        
+        font-size: 1.5vw;
+        font-weight: bold;
+        
+    }
+    .serviceContainer1 {
+        max-height: 10%;
+        width: 30%;
+        margin-left: 1%;
+    margin-right: 1%;
+    }
+    .titleBg {
+        font-size: 2vw;
+        
+    }
+    .searchBar {
+        
+        width: 50%;
+        
+    }
+}

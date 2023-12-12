@@ -1,0 +1,51 @@
+<div class="container">
+
+    <button class="menuBtn" [style.display]="openbtnMenu" (click)="openMenu()">Menu</button>
+    <button class="closeMenuBtn menuBtn" [style.display]="closebtnMenu" (click)="closeMenu()">Close</button>
+    <div class="title">MazdoorOnline</div>
+    <div class="navigation">
+        <button class="homeNavigation" [routerLink]="['/Home']" routerLinkActive="homeNavigationActive">Home</button>
+        <ng-container *ngIf="userLogin  ">
+            <button class="homeNavigation" [routerLink]="['/Jobs']" routerLinkActive="homeNavigationActive">Jobs</button>
+        </ng-container>
+        <button class="homeNavigation" [routerLink]="['/Services']" routerLinkActive="homeNavigationActive">Services</button>
+        <button class="homeNavigation" [routerLink]="['/aboutUs']" routerLinkActive="homeNavigationActive">About Us</button>
+        <button class="homeNavigation" [routerLink]="['/contactUs' ]" routerLinkActive="homeNavigationActive">Contact Us</button>
+    </div>
+    <div class="mobNavigation" [style.height.px]="menuHeight">
+        <button class="homeNavigation" [routerLink]="['/Home']">Home</button>
+        <ng-container *ngIf="userLogin  ">
+            <button class="homeNavigation" [routerLink]="['/Jobs']">Jobs</button>
+        </ng-container>
+
+        <button class="homeNavigation" [routerLink]="['/Services']">Services</button>
+        <button class="homeNavigation" [routerLink]="['/aboutUs']">About Us</button>
+        <button class="homeNavigation" [routerLink]="['/contactUs']">Contact Us</button>
+    </div>
+<div class="welcomeUser" *ngIf="activeUser">Welcome {{activeUser}}</div>
+    <ng-container *ngIf="userLogin ; else loginbtn">
+        <div class="example-button-container">
+            <button mat-fab color="warn" [matMenuTriggerFor]="menu">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        
+            <mat-menu #menu="matMenu">
+                <!-- <h3>Welcome {{activeUser}}</h3> -->
+                <ng-container *ngIf="adminLogin ; else profile">
+                    <button mat-menu-item [routerLink]="['/Dashboard']">DashBoard</button>
+                </ng-container>
+                <ng-template #profile>
+                    <button mat-menu-item [routerLink]="['/Profile']">Profile</button>
+                </ng-template>
+
+                <button mat-menu-item (click)="logOut()">Logout</button>
+            </mat-menu>
+
+        </div>
+
+    </ng-container>
+    <ng-template #loginbtn>
+        <div class="login_signup"><button class="loginBtn" [routerLink]="['/loginPage']">Login</button>
+            <button class="loginBtn signupBtn" [routerLink]="['/Signup']">Signup</button></div>
+    </ng-template>
+</div>

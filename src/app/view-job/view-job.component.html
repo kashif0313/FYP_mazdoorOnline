@@ -1,0 +1,48 @@
+<div class="container">
+
+
+    <div class="jobsContainer" *ngFor="let EmployeeItem of jobArray">
+
+        <div class="topJob">
+            <div class="name" (click)="openLabourProfile(EmployeeItem.jobUploadedBy)">{{EmployeeItem.name}}</div>
+            <div class="icon"><img src="../../assets/icons/{{EmployeeItem.jobLabour}}.png" alt="" class="iconSrc"></div>
+        </div>
+        <hr>
+        <div class="jobContentcontainer">
+            <div class="imageHolder"><img class="jobRequiredImage" src="..\assets\Jobs\{{EmployeeItem.jobImage}}" alt=""></div>
+            <div class="discription">
+                <div class="jobTitle">{{EmployeeItem.jobTitle}}</div>
+                <div class="jobDiscription">{{EmployeeItem.jobDetail}}</div>
+                <div class="jobLocation">Location : {{EmployeeItem.jobLocation}}</div>
+                <div class="intractionBtn"> <button class="viewBtn" (click)="jobBid()">Bid</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="bidder" *ngIf="openBid">
+        <h2> Bidding </h2>
+        <label for="bidInput"> Bid Amount </label>
+        <input type="text" name="bidInput" class="biddingInput" [(ngModel)]="bidderObj.amount"><br>
+        <button class="bidBtn" (click)="bidNow()">Bid</button>
+        <button class="Close bidBtn" (click)="closeBid()">Close</button>
+    </div>
+    <div class="biddingInfo">
+        {{noBid}}
+        <table width="100%" class="bidDataTable" *ngIf="bidopen">
+            <tr class="tableRow" *ngFor="let bidder of bidArray">
+                <td width="40%">
+                    <div class="bidderName">{{bidder.Bidder}}</div>
+                </td>
+                <td width="40%">
+                    <div class="bidderAmount">{{bidder.amount}}.Rs</div>
+                </td>
+                <td width="20%">
+                    <div class="bidderAmount"><button class="profileBtn" (click)="openLabourProfile(bidder.bidderID)"> Profile</button><button> example</button></div>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+</div>
+<app-latest-jobs></app-latest-jobs>
+<app-footer></app-footer>

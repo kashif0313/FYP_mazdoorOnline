@@ -1,0 +1,212 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.icon {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 85%;
+    top: 5%;
+}
+
+.iconSrc {
+    position: relative;
+    height: 100%;
+    width: auto;
+}
+
+.name {
+    position: relative;
+    margin-left: 1%;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+.topJob {
+    display: flex;
+}
+
+.jobTitle {
+    position: relative;
+    font-size: 1vw;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.jobDiscription {
+    position: relative;
+    word-wrap: break-word;
+    font-size: 1vw;
+    margin-top: 2%;
+}
+
+.jobRequiredImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.discription {
+    position: relative;
+    padding-left: 5%;
+    width: 100%;
+    height: auto;
+}
+
+.jobsContainer {
+    position: relative;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    height: 300px;
+    width: 40%;
+    left: 30%;
+    display: block;
+    padding: 2%;
+    text-align: center;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.jobContentcontainer {
+    position: relative;
+    display: flex;
+    height: 80%;
+}
+
+.imageHolder {
+    float: left;
+    height: 100%;
+    width: 500px;
+    object-fit: contain;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+}
+
+.intractionBtn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.viewBtn {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    background: red;
+    outline: none;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 30px;
+    margin-top: 12px;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: white;
+    font-size: 1vw;
+}
+
+.bidder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 3%;
+    font-size: 1.2vw;
+    justify-content: center;
+    text-align: center;
+}
+
+.biddingInput {
+    font-size: 1.2vw;
+    outline: none;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+
+.bidBtn {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2vw;
+    color: var(--buttonText);
+    background-color: var(--focusbuttonColor);
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 3%;
+}
+
+.Close {
+    color: var(--buttonTextunfocus);
+    background: var(--unfocusbuttonColor);
+    border: 1px solid black;
+}
+
+.biddingInfo {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 48%;
+    text-align: center;
+    justify-content: center;
+    left: 30%;
+    overflow: hidden;
+}
+
+.bidderName {
+    padding-left: 10px;
+    font-size: 1.2vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.bidDataTable {
+    justify-content: center;
+    font-size: 1.2vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+td {
+    border-bottom: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #009eddb6;
+    color: white;
+}
+.profileBtn
+{
+    position: relative;
+    border: none;
+    background-color:var(--focusbuttonColor);
+    color: var(--buttonText);
+    font-size: 1vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    margin: 2%;
+    border: 1px #009eddb6;
+}

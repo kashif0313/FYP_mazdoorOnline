@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="loginContainer">
+        <div class="title">
+            Login
+        </div>
+        <input class="inputFields" type="email" placeholder="Email / Phone no" [(ngModel)]="userLoginObj.email">
+        <input class="inputFields" type="password" name="" id="" placeholder="password" [(ngModel)]="userLoginObj.password">
+
+        <div class="password_remember">
+            <div class="rememberContainer">
+                <input type="radio" value="remember">
+                <label for="remember">Remember Me </label>
+            </div>
+
+            <button class="forgotPass">Forgot password?</button>
+        </div>
+
+        <button class="loginbtn" (click)="loginUser()">Login</button>
+        <div class="signUpNow">
+            <button class="signupBtn" [routerLink]="['/Signup']">Not a member signup Now</button>
+        </div>
+    </div>
+</div>

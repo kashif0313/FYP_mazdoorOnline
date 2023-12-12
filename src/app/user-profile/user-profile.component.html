@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="centerContent" *ngFor="let category of userArray">
+        <h2>My Profile</h2>
+
+        <div class="proFileImage">
+            <ng-container *ngIf="category.profileImage != 'DefaultProfile.png';else old">
+                <img src="..\assets\profileImages\{{category.profileImage}}" alt="" class="profile">
+            </ng-container>
+            <ng-template #old>
+                <img src="{{imageSrc}}" alt="" class="profile">
+            </ng-template>
+            <button class="addImage" (click)="userImage.click()">+</button>
+            <input type="file" (change)="uploadProfileImage($event)" hidden #userImage>
+        </div>
+        <button (click)="uploadProfileImageBox()"  class="uploadBTN">Upload Profile Image</button>
+        <div class="inputData">
+            <label for="name" class="labelFont">Name</label>
+            <input class="inputFields" type="name" placeholder="Name" [(ngModel)]="category.name" name="name"></div>
+        <div class="inputData">
+            <label for="email" class="labelFont">Email</label>
+            <input class="inputFields" type="email" name="" id="" placeholder="email" [(ngModel)]="category.email" name="email"></div>
+        <div class="inputData">
+            <label for="phone" class="labelFont">Phone No</label>
+            <input class="inputFields" type="number" placeholder="Phone no" [(ngModel)]="category.phoneNo" name="phone"></div>
+        <div class="inputData">
+            <label for="address" class="labelFont">Address</label>
+            <input class="inputFields" type="text" placeholder="address" [(ngModel)]="category.address" name="address">
+        </div>
+        <button (click)="updateProfile()"  class="uploadBTN">Update Profile</button>
+    </div>
+</div>

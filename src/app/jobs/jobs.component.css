@@ -1,0 +1,176 @@
+@import url("../main-page/main-page.component.css");
+.contentContainer {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    height: 700px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.jobsContainer {
+    position: relative;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    height: 300px;
+    width: 30%;
+    left: 30%;
+    display: block;
+    padding: 2%;
+    text-align: center;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.icon {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 85%;
+    top: 5%;
+}
+
+.iconSrc {
+    position: relative;
+    height: 100%;
+    width: auto;
+}
+
+.viewBtn {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    background: var(--focusbuttonColor);
+    outline: none;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 30px;
+    margin-top: 12px;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: white;
+    font-size: 1vw;
+}
+
+.name {
+    position: relative;
+    margin-left: 1%;
+    font-size: 1vw;
+}
+
+.topJob {
+    display: flex;
+}
+
+.jobTitle {
+    position: relative;
+    font-size: 1vw;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.jobDiscription {
+    position: relative;
+    word-wrap: break-word;
+    font-size: 1vw;
+    margin-top: 2%;
+}
+
+.jobRequiredImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.jobContentcontainer {
+    position: relative;
+    display: flex;
+    height: 80%;
+}
+
+.imageHolder {
+    float: left;
+    height: 100%;
+    width: 500px;
+    object-fit: contain;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+}
+
+.intractionBtn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.discription {
+    position: relative;
+    padding-left: 5%;
+    width: 100%;
+    height: auto;
+}
+
+.sidePanel {
+    position: sticky;
+    height: auto;
+    width: 20%;
+    left: 5%;
+    margin-top: 5%;
+    top: 250px;
+    margin-bottom: 5%;
+}
+
+.postJob {
+    position: relative;
+    font-size: 1vw;
+    background-color: var(--focusbuttonColor);
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    color: white;
+}
+
+.postJobBG {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.418);
+    height: 100%;
+    width: 100%;
+}
+
+.adminDeletePostBtn {
+    background-color: var(--warnText);
+    color: var(--buttonText);
+    font-size: 1.2vw;
+    border: none;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.adminDeletePostBtn:hover {
+    background-color: var(--buttonText);
+    color: var(--warnText);
+    border: 2px solid var(--warnText);
+}
+
+@media only screen and (max-width: 1100px) {}

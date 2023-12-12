@@ -1,0 +1,42 @@
+<div class="container">
+    <form method="post">
+
+        <div class="containerContent">
+            <div class="postJobContent">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Title</mat-label>
+                    <input matInput placeholder="Ex. Pizza" [(ngModel)]="jobDetails.jobTitle" name="title">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Details</mat-label>
+                    <textarea matInput placeholder="Ex. It makes me feel..." [(ngModel)]="jobDetails.jobDetails" name="detail"></textarea>
+                </mat-form-field>
+                <div class="jobCost">
+                    Job Rate :
+                    <mat-radio-group>
+                        <mat-radio-button class="jobcostbtn" value="Flat" (click)=" jobCost('Flat')">Flat</mat-radio-button>
+                        <mat-radio-button class="jobcostbtn" value="Bidding" (click)=" jobCost('Bidding')">Bidding</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <mat-form-field>
+                    <mat-label>Choose Labour</mat-label>
+                    <mat-select [(ngModel)]="jobDetails.jobLabour" name="labour">
+                        <mat-option *ngFor="let category of catArray" value="{{category.catName}}">{{category.catName}}</mat-option>
+
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Location</mat-label>
+                    <input matInput placeholder="Ex. Pizza" name="location" [(ngModel)]="jobDetails.jobLocation">
+                </mat-form-field>
+            </div>
+            <div class="postJobContent2">
+                <div class="previewImage"><img src="{{imageSrc}}" alt="" class="previewimageSrc"></div>
+                <input class="addImage" name="image" type="file" (change)="uploadedImage($event)" hidden #uploadProfileImg>
+                <button class="uploadImage" (click)="uploadProfileImg.click()">Add Image +</button>
+            </div>
+        </div>
+    </form>
+    <button class="postJob" (click)="postJobData()">Post</button>
+    <button class="closeBTN postJob" (click)="closePost()">Cancel</button>
+</div>

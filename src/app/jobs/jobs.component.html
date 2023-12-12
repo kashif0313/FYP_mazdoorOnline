@@ -1,0 +1,42 @@
+<div class="contentContainer">
+    <div class="container">
+
+        <div class="imageslider">
+            <div class="imagecontainer"><img class="imageSrc" src="../assets/img1.jpg" alt="">
+            <img class="imageSrc" src="../assets/img2.jpg" alt="">
+            <img class="imageSrc" src="../assets/img3.jpg" alt=""></div>
+        </div>
+
+    </div>
+    <div class="sidePanel">
+        <!--input type="text" placeholder="Location" name="loc"><label for="loc">Location</label-->
+        <button class="postJob" (click)="postJob()">Post Job</button>
+    </div>
+    <div class="jobsContainer" *ngFor="let EmployeeItem of EmployeeArray">
+        <div class="delBtn" *ngIf="currentUserAdmin">
+            <button (click)="confirmBtn()" class="adminDeletePostBtn">Delete</button>
+            <button *ngIf="confirmDisplay" (click)="adminDeleteJob(EmployeeItem.jobID,EmployeeItem.jobImage)" class="adminDeletePostBtn">Confirm</button>
+        </div>
+
+        <div class="topJob">
+            <div class="name">{{EmployeeItem.name}}</div>
+            <div class="icon"><img src="../../assets/icons/{{EmployeeItem.jobLabour}}.png" alt="" class="iconSrc"></div>
+        </div>
+        <hr>
+        <div class="jobContentcontainer">
+            <div class="imageHolder"><img class="jobRequiredImage" src="..\assets\Jobs\{{EmployeeItem.jobImage}}" alt=""></div>
+            <div class="discription">
+                <div class="jobTitle">{{EmployeeItem.jobTitle}}</div>
+                <div class="jobDiscription">{{EmployeeItem.jobDetail}}</div>
+                <div class="jobLocation">Location : {{EmployeeItem.jobLocation}}</div>
+                <div class="intractionBtn"><button class="viewBtn" (click)="openJob(EmployeeItem.jobID)">View</button> </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div *ngIf="display">
+    <app-post-job></app-post-job>
+    <div class="postJobBG"></div>
+</div>
+<app-footer></app-footer>

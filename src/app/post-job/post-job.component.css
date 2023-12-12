@@ -1,0 +1,114 @@
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2%;
+    z-index: 3;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.containerContent {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.postJobContent {
+    background-color: white;
+    flex: 1;
+}
+
+.postJobContent2 {
+    position: relative;
+    background-color: white;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+    background-color: white;
+    padding: 2%;
+}
+
+.jobCost {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+}
+
+.jobcostbtn {
+    position: relative;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.previewImage {
+    position: relative;
+    justify-content: center;
+    height: 200px;
+    width: 300px;
+    object-fit: contain;
+    background: transparent;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+
+.postJob {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2vw;
+    color: var(--buttonText);
+    background-color: var(--focusbuttonColor);
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.postJob:hover {
+    background-color: var(--focusbuttonHover);
+}
+
+.previewimageSrc {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.uploadImage {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 1.2vw;
+    border-radius: 20px;
+}
+
+.closeBTN {
+    color: var(--buttonTextunfocus);
+    background: var(--unfocusbuttonColor);
+    border: 1px solid black;
+}
+
+.closeBTN:hover {
+    color: var(--buttonText);
+}

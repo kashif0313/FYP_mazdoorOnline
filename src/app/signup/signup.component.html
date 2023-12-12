@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="SignupContainer">
+        <div class="title">
+            Signup
+        </div>
+        <form method="post">
+            <div class="signupContentContainer">
+
+
+
+                <div class="centerContent" [style.left]="moveView1">
+                    <div class="userContainer">
+
+
+                        <div class="imageLabel">
+                            <img src="../../assets/labourIcon.png" alt="" class="user" value="labourImg"><br>
+                            <input type="radio" class="radioBtn" title="Labourradio" name="user" value="labour" [(ngModel)]="userObj.user">
+                            <label for="labourImg" class="radioLabel">Labour</label>
+                        </div>
+                        <div class="imageLabel">
+                            <img src="../../assets/personIcon.png" alt="" class="user" value="EmployeImg"><br>
+                            <input type="radio" class="radioBtn" title="Employeradio" name="user" value="Employe" [(ngModel)]="userObj.user">
+                            <label for="EmployeImg" class="radioLabel">Employe</label>
+                        </div>
+                    </div>
+                    <div class="navigationButton">
+                        <button class="loginbtn" (click)="changeView('step1')">Next 1</button></div>
+                </div>
+                <div class="centerContent" [style.left]="moveView1">
+                    <input class="inputFields" type="name" placeholder="Name" [(ngModel)]="userObj.name" name="name" required>
+                    <input class="inputFields" type="number" name="" id="" placeholder="Phone no" [(ngModel)]="userObj.phoneNo" name="phoneNumber" required>
+                    <input class="inputFields" type="password" placeholder="password" [(ngModel)]="userObj.password" name="password" required>
+                    <input class="inputFields" type="password" name="Retypepassword" [(ngModel)]="Retypepassword" id="" placeholder="Retype Password">
+                    <div class="navigationButton"><button class="loginbtn loginbtn1" (click)="changeView('step1.1')">Back 2</button>
+                        <button class="loginbtn" (click)="changeView('step2')">Next 2</button></div>
+
+                </div>
+                <div class="centerContent" [style.left]="moveView1">
+                    <div class="proFileImage">
+                        
+                            <img src="{{imageSrc}}" alt="" class="profile">
+                        
+                        <button class="addImage" (click)="userImage.click()">+</button>
+                        <input type="file" (change)="uploadProfileImage($event)" hidden #userImage>
+                    </div>
+                    <input class="inputFields" type="name" placeholder="Email" [(ngModel)]="userObj.email" name="email">
+                    <input class="inputFields" type="text" name="address" [(ngModel)]="userObj.address" placeholder="Address">
+                    <div class="navigationButton"><button class="loginbtn loginbtn1" (click)="changeView('step2.1')">Back 3</button>
+                        <button class="loginbtn" (click)="changeView('lastStep')">Finish</button>
+                        <button class="loginbtn loginbtn1" (click)="changeView('skip')">Skip</button></div>
+
+                </div>
+
+            </div>
+        </form>
+        <div class="errorContainer">{{errorName}}</div>
+
+
+        <div class="progressSteps">
+            <div class=" step" [style.width]="progressBar"></div>
+        </div>
+
+    </div>
+
+</div>

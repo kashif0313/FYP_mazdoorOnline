@@ -1,0 +1,63 @@
+<div class="container">
+    <button (click)="addNewCategory()" class="postJob">Add Category</button>
+    <div class="newcategoryContainer" *ngIf="openNewAddCatory">
+        <mat-form-field class="example-full-width">
+            <mat-label>category Name</mat-label>
+            <input matInput placeholder="Electrician" [(ngModel)]="categoryName.category" name="title">
+        </mat-form-field>
+
+        <label for="icon">category Icon</label>
+        <input name="icon" type="file" (change)="uploadCatIcon($event)">
+        <img src="{{iconSrc}}" alt="" class="profile">
+        <label for="icon">category Image</label>
+        <input name="icon" type="file" (change)="uploadCatImage($event)">
+        <img src="{{imgSrc}}" alt="" class="profile">
+        <button class="addNewCategory" (click)="uploadNewCategory()">Add</button>
+    </div>
+    <div class="newcategoryContainer" *ngIf="openUpdate">
+        <mat-form-field class="example-full-width">
+            <mat-label>category Name</mat-label>
+            <input matInput placeholder="{{updateCategoryOldName}}" [(ngModel)]="categoryName.category" name="title">
+        </mat-form-field>
+
+        <button class="addNewCategory" (click)="updateNewCategory()">Update</button>
+    </div>
+    <table width="70%" class="bidDataTable">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Icon</th>
+        <th>Image</th>
+        <th>edit</th>
+        <th>delete</th>
+
+        <tr *ngFor="let category of categoryArray">
+            <td>{{category.catId}}</td>
+            <td>{{category.catName}}</td>
+            <td><img src="../../assets/icons/{{category.catIcon}}" alt="" class="iconSrc"></td>
+            <td><img src="../../assets/Category/{{category.catImage}}" alt="" class="imageSrc"></td>
+            <td><button (click)="updateCategory(category.catId , category.catName)" class="postJob">Edit</button></td>
+            <td><button (click)="deleteCategory(category.catId)" class="warnBtn">Delete</button></td>
+        </tr>
+    </table>
+    <table width="70%"class="bidDataTable">
+        <th>ID</th>
+        <th>Name</th>
+        <th>email</th>
+        <th>Phone No</th>
+        <th>User</th>
+        <th>Address</th>
+        <th>Blocked</th>
+        <th>Delete</th>
+        <tr *ngFor="let Dashboard of DashboardArray">
+            <td>{{Dashboard.id}}</td>
+            <td>{{Dashboard.name}}</td>
+            <td>{{Dashboard.email}}</td>
+            <td>{{Dashboard.phoneNo}}</td>
+            <td>{{Dashboard.user}}</td>
+            <td>{{Dashboard.address}}</td>
+            <td>{{Dashboard.blocked}}</td>
+            <td><button (click)="blockUser(Dashboard.id)" class="warnBtn">Block</button></td>
+            <td><button (click)="unblockUser(Dashboard.id)" class="postJob">Unblock</button></td>
+        </tr>
+    </table>
+</div>

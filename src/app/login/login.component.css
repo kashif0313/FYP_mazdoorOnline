@@ -1,0 +1,185 @@
+.container {
+    justify-content: center;
+    position: relative;
+}
+
+.title {
+    font-size: 2vw;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.loginContainer {
+    border: 2px solid black;
+    border-radius: 30px;
+    width: 40%;
+    justify-content: center;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    object-fit: contain;
+}
+
+.inputFields {
+    position: relative;
+    display: block;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 1vw;
+    width: 80%;
+    left: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.password_remember {
+    position: relative;
+    display: grid;
+    width: 80%;
+    left: 10%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10%;
+}
+
+.loginbtn {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 1vw;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.forgotPass {
+    position: relative;
+    text-align: right;
+    text-decoration: underline;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+.rememberContainer {
+    position: relative;
+    justify-content: left;
+    text-align: left;
+}
+
+.signUpNow {
+    position: relative;
+    background-color: var(--mainColor);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-top: 8%;
+}
+
+.signupBtn {
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 1vw;
+    border: none;
+    outline: none;
+    background: transparent;
+    color:white;
+}
+
+@media only screen and (max-width: 1100px) {
+    .container {
+        justify-content: center;
+        position: relative;
+    }
+    .title {
+        font-size: 4vw;
+        font-weight: bold;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .loginContainer {
+        border: 2px solid black;
+        border-radius: 30px;
+        width: 60%;
+        justify-content: center;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30%;
+        object-fit: contain;
+    }
+    .inputFields {
+        position: relative;
+        display: block;
+        border-radius: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        font-size: 1.5vw;
+        width: 80%;
+        left: 10%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .password_remember {
+        position: relative;
+        display: grid;
+        width: 80%;
+        left: 10%;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10%;
+    }
+    .loginbtn {
+        position: relative;
+        background: transparent;
+        outline: none;
+        border: 1px solid black;
+        border-radius: 50px;
+        font-size: 2vw;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .forgotPass {
+        position: relative;
+        text-align: right;
+        text-decoration: underline;
+        background: transparent;
+        outline: none;
+        border: none;
+    }
+    .rememberContainer {
+        position: relative;
+        justify-content: left;
+        text-align: left;
+    }
+    .signUpNow {
+        position: relative;
+        
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        margin-top: 8%;
+    }
+    .signupBtn {
+        position: relative;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 2vw;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+}

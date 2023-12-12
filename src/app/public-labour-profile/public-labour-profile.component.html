@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="centerContent" *ngFor="let category of userArray">
+        <h2>{{category.name}} Profile</h2>
+
+        <div class="proFileImage">
+
+                <img src="..\assets\profileImages\{{category.profileImage}}" alt="" class="profile">
+        </div>
+        <div class="inputData">
+            <label for="name" class="labelFont">Name</label>
+            <span class="inputFields" name="name">{{category.name}} </span></div>
+        <div class="inputData">
+            <label for="email" class="labelFont">Email</label>
+            <span class="inputFields" name="email">{{category.email}} </span></div>
+        <div class="inputData">
+            <label for="phone" class="labelFont">Phone No</label>
+            <span class="inputFields"   name="phone">{{category.phoneNo}} </span></div>
+        <div class="inputData">
+            <label for="address" class="labelFont">Address</label>
+            <span class="inputFields"   name="address">{{category.address}} </span>
+        </div>
+        <label class="labelFont">Ratings</label>{{Final_Ratings}}
+    
+    <div class="ratings" *ngIf="rated">
+        <h2>Give ratings Out of 10</h2><br>
+        <input type="text" [(ngModel)]="ratingsLabour"><br>
+        <Button (click)="submitRating()">Submit</Button>
+    </div></div>
+</div>

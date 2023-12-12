@@ -1,0 +1,159 @@
+.jobsContainer {
+    position: relative;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    height: 150px;
+    width: 20%;
+    left: 0%;
+    display: inline-block;
+    padding: 2%;
+    text-align: center;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.icon {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 85%;
+    top: 5%;
+    overflow: hidden;
+}
+
+.iconSrc {
+    position: relative;
+    height: 100%;
+    width: auto;
+}
+
+.viewBtn {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    background: var(--focusbuttonColor);
+    outline: none;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 30px;
+    margin-top: 12px;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: white;
+    font-size: 1vw;
+}
+
+.name {
+    position: relative;
+    margin-left: 1%;
+    font-size: 1vw;
+}
+
+.topJob {
+    display: flex;
+    margin-bottom: 5%;
+}
+
+.jobTitle {
+    position: relative;
+    font-size: 1vw;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.jobDiscription {
+    position: relative;
+    font-size: 1vw;
+    justify-content: center;
+    text-align: center;
+}
+
+.jobRequiredImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.jobContentcontainer {
+    position: relative;
+    display: flex;
+    height: 80%;
+}
+
+.imageHolder {
+    float: left;
+    height: 100%;
+    width: 300px;
+    object-fit: contain;
+}
+
+.intractionBtn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.discription {
+    position: relative;
+    padding-left: 5%;
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 1100px) {
+    .jobsContainer {
+        position: relative;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 20px;
+        height: 200px;
+        width: 80%;
+        left: 10%;
+        padding: 5%;
+        text-align: center;
+        justify-content: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .name {
+        position: relative;
+        margin-left: 2%;
+    }
+    .topJob {
+        display: flex;
+    }
+    .icon {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border: 2px solid green;
+        left: 85%;
+    }
+    .iconSrc {
+        position: relative;
+        height: 100%;
+        width: auto;
+    }
+    .viewBtn {
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        background: red;
+        outline: none;
+        border: none;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 30px;
+        margin-top: 5%;
+        color: white;
+    }
+}
